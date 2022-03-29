@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" href="./static/css/login.css" />
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="./static/js/jquery.js"></script>
+</head>
+
+<body style="background: url('img/RAM.jpg');background-repeat: no-repeat;background-size: 100% auto;">
+	<div id="login-box">
+		<img width="200px" src="img/title.png">
+		<h1>Login</h1>
+		<div class="form">
+			<div class="item">
+				<i class="fa fa-paper-plane" style="font-size:24px"></i>
+				<input type="text" name="account" placeholder="Username">
+			</div>
+			<div class="item">
+				<i class="fa fa-lock" style="font-size:24px"></i>
+				<input type="password" name="password" placeholder="Password">
+			</div>
+			<div id="register">
+				还没有账号？去&nbsp&nbsp<a href="register.html">注册</a>
+			</div>
+		</div>
+		<a onclick="to_login()"><button>Login</button></a>
+	</div>
+
+</body>
+<script>
+    /**
+	 * 登录
+     */
+    function to_login() {
+    var account = $('input[name="account"]').val();
+    var password = $('input[name="password"]').val();
+    if (account=='' || password == ''){
+        alert('账号或者密码不能为空');
+        return false;
+	}
+	var url = './controller/login.php';
+    var data = {
+        'account':account,
+		'password':password
+	};
+    $.ajax({
+		url:url,
+		type:'post',
+		data:data,
+		success:function (res) {
+			if (res == 1){
+			    alert('登录成功');
+			    window.location.href = './user.php';
+			} else if (res == -1){
+			    alert('账号或密码错误');
+			}
+        }
+	})
+
+}
+</script>
+
+</html>

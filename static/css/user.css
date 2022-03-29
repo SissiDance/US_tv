@@ -1,0 +1,40 @@
+/* 我的收藏 */
+#heart_user {
+    font-family: 'Microsoft YaHei', 'SimHei';
+}
+
+#like_user {
+    font-size: 66px;
+    color: #f00;
+}
+
+/* 我的评论 */
+#comment_user {
+    font-size: 64px;
+    color: #BDB76B;
+}
+
+#mine {
+    display: inline-block;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#p_user {
+    width: 150px;
+    height: 220px;
+    border-radius: 5px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+}
+
+#title_user {
+    color: black;
+    display: block;
+    float: none;
+    font-size: 12px;
+    font-family: 'Microsoft YaHei', 'SimHei';
+    padding: 16px 18px;
+    text-decoration: none;
+}

@@ -1,0 +1,266 @@
+body {
+    background-attachment: fixed;
+    max-width: 100%;
+}
+
+/* navi li */
+li {
+    display: inline;
+}
+
+li a {
+    display: block;
+    float: left;
+    font-size: 24px;
+    font-family: 'Microsoft YaHei', 'SimHei';
+    padding: 28px 18px;
+    text-decoration: none;
+}
+
+/* a */
+a:visited {
+    color: black;
+}
+
+a:hover {
+    text-shadow: 5px 5px 5px #A9A9A9;
+}
+
+/* img + title */
+.ad a:hover {
+    opacity: 0.8;
+}
+
+#title {
+    color: black;
+    display: block;
+    float: none;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei', 'SimHei';
+    padding: 16px 18px;
+    text-decoration: none;
+}
+
+/* navi div */
+#navi {
+    margin-left: 130px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    height: 100px;
+}
+
+#navi1 {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#navi2 {
+    display: inline-block;
+    margin-left: -10px;
+}
+
+#navi3 {
+    display: inline-block;
+    margin-right: 0px;
+    /*margin-left: 200px;*/
+    margin-left: 150px;
+}
+
+#navi4 {
+    display: inline-block;
+    /* margin-right: 0px; */
+    margin-left: 0px;
+}
+
+#log {
+    display: block;
+    float: left;
+    font-size: 24px;
+    font-family: 'Microsoft YaHei', 'SimHei';
+    padding: 28px 18px;
+    text-decoration: none;
+}
+
+#log_out {
+    display: block;
+    float: left;
+    font-size: 24px;
+    font-family: 'Microsoft YaHei', 'SimHei';
+    padding: 28px 18px;
+    text-decoration: none;
+}
+
+/* search */
+div.search {
+    padding: 30px 0;
+}
+
+form {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+input {
+    width: 100%;
+    height: 42px;
+    padding-left: 13px;
+}
+
+button {
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+    position: absolute;
+}
+
+/* search bar */
+.bar form {
+    height: 42px;
+}
+
+.bar input {
+    width: 250px;
+    border-radius: 42px;
+    border: 2px solid black;
+    background: white;
+    transition: .3s linear;
+    float: right;
+}
+
+.bar input:focus {
+    width: 300px;
+}
+
+.bar button {
+    background: none;
+    top: 2px;
+    right: 0;
+}
+
+.bar button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: large;
+    color: black;
+}
+
+/* 缩略图父容器 */
+#add {
+    display: inline-block;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 缩略图子容器 */
+.ad {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 10px;
+}
+
+/* 海报 */
+#p {
+    width: 205px;
+    height: 300px;
+    border-radius: 5px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+}
+
+#detail {
+    display: inline-block;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 0px;
+}
+
+#detail1 {
+    display: inline-block;
+    margin-left: 60px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+#detail2 {
+    width: 460px;
+    height: 460px;
+    overflow: visible;
+    display: inline-block;
+    margin-top: 10px;
+    padding-left: 120px;
+    padding-top: 10px;
+}
+
+/* 收藏功能 */
+#heart {
+    text-align: center;
+    /* margin: 0 auto; */
+}
+
+.like {
+    font-size: 66px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.cs {
+    color: #f00;
+}
+
+/* 评论功能 */
+#comment {
+    width: 920px;
+    height: auto;
+    font-family: 'Microsoft YaHei', 'SimHei';
+}
+
+#user_comment {
+    font-size: 17px;
+    width: 720px;
+    margin-left: 80px;
+    margin-top: 40px;
+    padding: 30px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    background-color: #0000001f;
+    border-radius: 20px;
+}
+
+/* 我的评论 */
+textarea {
+    background-color: #00000000;
+    border: none;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 720px;
+    height: 100px;
+    font-family: 'Microsoft YaHei', 'SimHei';
+    font-size: 17px;
+}
+
+/* 详情页图片与文字格式 */
+#poster {
+    width: 310px;
+    height: 460px;
+    border-radius: 17px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+}
+
+p {
+    font-size: 14px;
+    font-family: 'Microsoft YaHei', 'SimHei';
+    word-break: normal;
+    white-space: pre-warp;
+    word-wrap: break-word;
+}

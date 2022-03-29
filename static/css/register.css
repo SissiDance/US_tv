@@ -1,0 +1,55 @@
+body {
+    background: url('./img/RAM.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+div {
+    font-family: 'Microsoft YaHei', 'SimHei';
+}
+
+#register-box {
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 7%;
+    text-align: center;
+    background: #FFFFFF96;
+    padding: 20px 50px;
+}
+
+#register-box h1 {
+    color: #000;
+}
+
+#register-box .form .item {
+    margin-top: 15px;
+}
+
+#register-box .form .item i {
+    font-size: 18px;
+    color: #000;
+}
+
+#register-box .form .item input {
+    width: 180px;
+    font-size: 18px;
+    border: 0;
+    border-bottom: 2px solid #000;
+    padding: 5px 10px;
+    background: #ffffff00;
+    color: #000;
+}
+
+#register-box button {
+    margin-top: 20px;
+    width: 190px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    background-color: #FFF;
+    /* background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%); */
+    border: 0;
+    border-radius: 15px;
+}

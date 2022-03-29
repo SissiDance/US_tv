@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="./static/css/register.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="./static/js/jquery.js"></script>
+    <script src="./static/jqui/jquery-ui.min.js"></script>
+</head>
+
+<body style="background: url('./img/RAM.jpg');background-repeat: no-repeat;background-size: 100% auto;">
+    <div id="register-box">
+        <img width="200px" src="./img/title.png">
+        <h1>Register</h1>
+        <div class="form">
+            <div class="item">
+                用户名：
+                <input id="1" name="nickname" type="text" placeholder="输入您的用户名">
+            </div>
+            <div class="item">
+                账号：
+                <input id="2" name="account" type="text" placeholder="请输入数字">
+            </div>
+            <div class="item">
+                密码：
+                <input id="3" name="password" type="text" placeholder="Password">
+            </div>
+            <div class="item">
+                确认密码：
+                <input id="4" name="password2" type="text" placeholder="Password Again">
+            </div>
+        </div>
+        <button id="jumpTo" type="button" onclick="to_register()">注册</button>
+        <script>
+            /**
+             * 注册
+             */
+            function to_register() {
+                var nickname = $('input[name="nickname"]').val();
+                var account = $('input[name="account"]').val();
+                var password = $('input[name="password"]').val();
+                var password2 = $('input[name="password2"]').val();
+                if (nickname == '' || account=='' || password==''){
+                    alert('数据不能为空');
+                    return false;
+                }
+                if (password != password2){
+                    alert('两次密码不一样');
+                    return false;
+                }
+                var url = './controller/register.php';
+                var data = {
+                    'nickname':nickname,
+                    'account':account,
+                    'password':password
+                };
+                $.ajax({
+                    url:url,
+                    type:'post',
+                    data:data,
+                    success:function (res) {
+                        if (res == 1){
+                            alert('注册成功');
+                            window.location.href = './login.html';
+                        }else if(res == -1){
+                            alert('账号已被注册'); 
+                        }
+                    }
+                })
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
